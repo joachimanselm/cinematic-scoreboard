@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Trophy, Timer, Crown, Maximize2 } from "lucide-react";
+import { Church, Timer, Crown, Maximize2 } from "lucide-react";
 
 const links = [
-  { to: "/", label: "Scoreboard", icon: Trophy },
+  { to: "/", label: "Scoreboard", icon: Church },
   { to: "/timer", label: "Timer", icon: Timer },
   { to: "/winner", label: "Winner", icon: Crown },
 ] as const;
@@ -21,10 +21,10 @@ export function Nav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between glass rounded-full px-6 py-3 shadow-elegant">
         <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-gold-gradient grid place-items-center">
-            <Trophy className="h-4 w-4 text-background" />
+            <Church className="h-4 w-4 text-background" />
           </div>
           <span className="font-bold tracking-tight text-sm sm:text-base">
-            CINEMATIC <span className="text-gold">SCOREBOARD</span>
+            ST PAUL'S <span className="text-gold">VBS</span>
           </span>
         </Link>
 

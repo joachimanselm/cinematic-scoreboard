@@ -6,7 +6,7 @@ import { Play, Pause, RotateCcw } from "lucide-react";
 export const Route = createFileRoute("/timer")({
   head: () => ({
     meta: [
-      { title: "Timer — Cinematic Scoreboard" },
+      { title: "Timer — ST PAUL'S VBS" },
       { name: "description", content: "Cinematic countdown timer with smooth circular animation." },
     ],
   }),

@@ -8,7 +8,7 @@ import { useRealtimeTeams } from "@/hooks/useRealtimeTeams";
 export const Route = createFileRoute("/winner")({
   head: () => ({
     meta: [
-      { title: "Winner Reveal — Cinematic Scoreboard" },
+      { title: "Winner Reveal — ST PAUL'S VBS" },
       { name: "description", content: "Dramatic countdown and cinematic winner announcement." },
     ],
   }),
