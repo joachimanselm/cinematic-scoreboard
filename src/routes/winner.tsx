@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import confetti from "canvas-confetti";
-import { Trophy, Play, RotateCcw } from "lucide-react";
+import { Church, Play, RotateCcw } from "lucide-react";
 import { useRealtimeTeams } from "@/hooks/useRealtimeTeams";
 
 export const Route = createFileRoute("/winner")({
@@ -132,7 +132,7 @@ function WinnerPage() {
       {phase === "revealed" && winner && (
         <div ref={revealRef} className="relative z-10 text-center">
           <div ref={trophyRef} className="mx-auto mb-6 grid place-items-center h-32 w-32 sm:h-40 sm:w-40 rounded-full bg-gold-gradient shadow-elegant">
-            <Trophy className="h-16 w-16 sm:h-20 sm:w-20 text-background" />
+            <Church className="h-16 w-16 sm:h-20 sm:w-20 text-background" />
           </div>
           <p className="text-xs uppercase tracking-[0.5em] text-gold/90 mb-4">Champion</p>
           <h2
