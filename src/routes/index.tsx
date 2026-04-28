@@ -10,7 +10,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Live Scoreboard — Cinematic Scoreboard" },
+      { title: "Live Scoreboard — ST PAUL'S VBS" },
       { name: "description", content: "Real-time 4-team scoreboard synced across all devices." },
     ],
   }),
