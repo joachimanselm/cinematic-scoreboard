@@ -88,7 +88,7 @@ function WinnerPage() {
   const reset = () => { setPhase("idle"); setCount(10); };
 
   return (
-    <div className="relative px-4 pb-10 min-h-[calc(100vh-7rem)] grid place-items-center overflow-hidden">
+    <div className="relative px-4 pt-28 pb-10 min-h-screen grid place-items-center overflow-hidden">
       {/* Spotlight overlay during counting/reveal */}
       {phase !== "idle" && <div className="absolute inset-0 spotlight pointer-events-none" />}
 

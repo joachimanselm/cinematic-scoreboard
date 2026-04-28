@@ -38,7 +38,7 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap",
       },
     ],
   }),
@@ -65,7 +65,7 @@ function RootComponent() {
   return (
     <div className="relative min-h-screen">
       <Nav />
-      <main className="relative z-10 pt-24">
+      <main className="relative z-10">
         <Outlet />
       </main>
       <Toaster theme="dark" position="top-center" />
