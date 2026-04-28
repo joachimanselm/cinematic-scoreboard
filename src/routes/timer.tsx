@@ -88,7 +88,7 @@ function TimerPage() {
   const ringColor = lowWarning ? "var(--color-destructive)" : "var(--gold)";
 
   return (
-    <div className="px-4 sm:px-6 pb-10 grid place-items-center min-h-[calc(100vh-7rem)]">
+    <div className="px-4 sm:px-6 pt-28 pb-10 grid place-items-center min-h-screen">
       <div className="text-center w-full max-w-2xl">
         <p className="text-xs uppercase tracking-[0.3em] text-gold/80 mb-2">Countdown</p>
         <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10">
