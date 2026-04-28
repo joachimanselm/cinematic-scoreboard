@@ -28,9 +28,17 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cinematic Live Scoreboard" },
+      { title: "ST.PAUL'S VBS DASHBOARD" },
       { name: "description", content: "A premium real-time event scoreboard with cinematic animations." },
       { name: "theme-color", content: "#0b0b14" },
+      { property: "og:title", content: "ST.PAUL'S VBS DASHBOARD" },
+      { name: "twitter:title", content: "ST.PAUL'S VBS DASHBOARD" },
+      { property: "og:description", content: "A premium real-time event scoreboard with cinematic animations." },
+      { name: "twitter:description", content: "A premium real-time event scoreboard with cinematic animations." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48f461ed-c2fc-4cf4-b6cc-56ad11e3184f/id-preview-f647a8cd--d47d75d6-ca4e-465a-b42a-1ae36815c800.lovable.app-1777399836100.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48f461ed-c2fc-4cf4-b6cc-56ad11e3184f/id-preview-f647a8cd--d47d75d6-ca4e-465a-b42a-1ae36815c800.lovable.app-1777399836100.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
