@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { Church, Timer, Crown, Maximize2 } from "lucide-react";
 
 const links = [
@@ -16,9 +17,41 @@ function toggleFullscreen() {
 }
 
 export function Nav() {
+  const { pathname } = useLocation();
+  const isScoreboard = pathname === "/";
+  const [visible, setVisible] = useState(true);
+
+  // Auto-hide on the scoreboard page after idle
+  useEffect(() => {
+    if (!isScoreboard) {
+      setVisible(true);
+      return;
+    }
+    let timer: number | undefined;
+    const show = () => {
+      setVisible(true);
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => setVisible(false), 3000);
+    };
+    show();
+    window.addEventListener("mousemove", show);
+    window.addEventListener("touchstart", show);
+    window.addEventListener("keydown", show);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("mousemove", show);
+      window.removeEventListener("touchstart", show);
+      window.removeEventListener("keydown", show);
+    };
+  }, [isScoreboard]);
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50 px-6 py-4">
-      <div className="mx-auto flex max-w-7xl items-center justify-between glass rounded-full px-6 py-3 shadow-elegant">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 px-4 sm:px-6 py-4 transition-opacity duration-500 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full px-5 py-2.5 shadow-elegant bg-black/60 backdrop-blur-xl border border-white/10">
         <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-gold-gradient grid place-items-center">
             <Church className="h-4 w-4 text-background" />
